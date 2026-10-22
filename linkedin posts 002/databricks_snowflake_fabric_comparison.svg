@@ -1,0 +1,353 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1720 1200" width="100%" height="100%">
+  <defs>
+    <!-- Card Drop Shadows -->
+    <filter id="card-shadow" x="-3%" y="-2%" width="106%" height="108%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.06"/>
+    </filter>
+
+    <!-- Header Gradient Strip -->
+    <linearGradient id="header-grad-strip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF3621"/>
+      <stop offset="50%" stop-color="#249EDC"/>
+      <stop offset="100%" stop-color="#008272"/>
+    </linearGradient>
+
+    <!-- Fabric Icon Gradient Assets -->
+    <linearGradient id="fab-g-a" x1="12.953" x2="12.953" y1="44.001" y2="29.457" gradientUnits="userSpaceOnUse">
+      <stop offset=".056" stop-color="#2AAC94"/><stop offset=".588" stop-color="#0E6961"/><stop offset="1" stop-color="#085954"/>
+    </linearGradient>
+    <linearGradient id="fab-g-b" x1="31.331" x2="17.286" y1="33.448" y2="18.173" gradientUnits="userSpaceOnUse">
+      <stop offset=".042" stop-color="#ABE88E"/><stop offset=".549" stop-color="#2AAA92"/><stop offset=".906" stop-color="#117865"/>
+    </linearGradient>
+    <linearGradient id="fab-g-c" x1="7.013" x2="39.06" y1="10.247" y2="25.128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6AD6F9"/><stop offset=".651" stop-color="#6DE9BB"/><stop offset=".994" stop-color="#ABE88E"/>
+    </linearGradient>
+  </defs>
+  <rect id="canvas-bg" width="1720" height="1200" fill="#F8FAFD"/>
+  <rect id="top-decor-strip" width="1720" height="6" fill="url(#header-grad-strip)"/>
+  <!-- ================= TOP HEADER ================= -->
+  <g id="main-header">
+    <rect x="70" y="24" width="280" height="30" rx="15" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1"/>
+    <circle cx="86" cy="39" r="5" fill="#0284C7"/>
+    <text x="100" y="44" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#0369A1" letter-spacing="0.8">DATA ARCHITECTURE BREAKDOWN</text>
+
+    <text x="70" y="92" font-family="Segoe UI, -apple-system, sans-serif" font-size="38" font-weight="900" letter-spacing="-0.5">
+      <tspan fill="#FF3621">Databricks</tspan> <tspan fill="#94A3B8" font-weight="400">vs.</tspan> <tspan fill="#0284C7">Snowflake</tspan> <tspan fill="#94A3B8" font-weight="400">vs.</tspan> <tspan fill="#008272">Microsoft Fabric</tspan>
+    </text>
+    <text x="70" y="122" font-family="Segoe UI, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#475569">
+      Under-the-hood engine internals, storage formats, compute virtualization, and architectural trade-offs.
+    </text>
+  </g>
+  <!-- ================= COLUMN 1: DATABRICKS ================= -->
+  <g id="col-databricks">
+    <rect x="70" y="138" width="500" height="750" rx="16" fill="#FFFFFF" stroke="#FFD5CC" stroke-width="1.5" filter="url(#card-shadow)"/>
+    
+    <!-- Header Strip -->
+    <rect x="70" y="138" width="500" height="96" rx="16" fill="#FFF5F2"/>
+    <rect x="70" y="220" width="500" height="14" fill="#FFF5F2"/>
+    <line x1="70" y1="234" x2="570" y2="234" stroke="#FFD5CC" stroke-width="1.8"/>
+
+    <!-- Databricks Logo & Header Text (Centered vertically & aligned) -->
+    <g transform="translate(90, 154)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#FFFFFF" stroke="#FFD5CC" stroke-width="1.5" filter="url(#card-shadow)"/>
+      <g transform="translate(18, 17)">
+        <polygon points="14,0 26,6.5 14,13 2,6.5" fill="#FF3621"/>
+        <polygon points="14,8 26,14.5 14,21 2,14.5" fill="#FF5F49" opacity="0.85"/>
+        <polygon points="14,16 26,22.5 14,29 2,22.5" fill="#E02410"/>
+      </g>
+    </g>
+    <!-- Brand Title in Brand Color -->
+    <text x="172" y="175" font-family="Segoe UI, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#FF3621" letter-spacing="-0.3">Databricks</text>
+    <rect x="172" y="187" width="206" height="30" rx="15" fill="#FFE7E1" stroke="#FFC0B3" stroke-width="1.2"/>
+    <text x="275" y="206" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#FF3621">THE CODE-FIRST LAKEHOUSE</text>
+
+    <!-- Tier 1: Engine -->
+    <g transform="translate(86, 248)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#FFF8F5" stroke="#FFE4DE" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#FF3621"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">1</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#9A1D0E">Execution Engine: Photon (C++)</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Apache Spark + Vectorized Photon engine in C++</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• JVM memory bypass via native SIMD instructions</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Extreme throughput Spark Structured Streaming</text>
+    </g>
+
+    <!-- Tier 2: Storage -->
+    <g transform="translate(86, 370)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">2</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">Storage: Delta Lake (UniForm)</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Parquet + JSON ACID transaction log (_delta_log)</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• UniForm generates Iceberg &amp; Hudi metadata in-place</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• True open files in customer storage (S3/ADLS/GCS)</text>
+    </g>
+
+    <!-- Tier 3: Governance -->
+    <g transform="translate(86, 492)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">3</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">Governance: Unity Catalog</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• 3-level namespace: catalog.schema.table</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Unified multi-cloud governance (AWS, Azure, GCP)</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Governs tables, models, features, functions &amp; agents</text>
+    </g>
+
+    <!-- Tier 4: Developer & AI -->
+    <g transform="translate(86, 614)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">4</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">AI &amp; Workflows: Mosaic AI</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Native MLflow tracking + Vector Search + Model Serving</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Databricks Asset Bundles (DABs) for Git CI/CD</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Full LLM fine-tuning, RAG ops &amp; Compound AI systems</text>
+    </g>
+
+    <!-- Verdict Box with Safe Multi-line Wrapping -->
+    <g transform="translate(86, 736)">
+      <rect x="0" y="0" width="468" height="138" rx="12" fill="#FFF5F2" stroke="#FF3621" stroke-width="1.5"/>
+      <text x="16" y="26" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#FF3621">ARCHITECTURAL SWEET SPOT &amp; TRADEOFF</text>
+      <text x="16" y="49" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1E293B">Best when: You write PySpark, Scala, or Python.</text>
+      <text x="16" y="70" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">Unmatched for complex ETL pipelines, massive streaming data,</text>
+      <text x="16" y="87" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">model training, and cross-cloud open-lake architectures.</text>
+      <text x="16" y="112" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#C5221F">Trade-off: Cluster spin-up latency &amp; DBU cost tuning.</text>
+    </g>
+  </g>
+  <!-- ================= COLUMN 2: SNOWFLAKE ================= -->
+  <g id="col-snowflake">
+    <rect x="610" y="138" width="500" height="750" rx="16" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5" filter="url(#card-shadow)"/>
+
+    <!-- Header Strip -->
+    <rect x="610" y="138" width="500" height="96" rx="16" fill="#F0F9FF"/>
+    <rect x="610" y="220" width="500" height="14" fill="#F0F9FF"/>
+    <line x1="610" y1="234" x2="1110" y2="234" stroke="#BAE6FD" stroke-width="1.8"/>
+
+    <!-- Snowflake Logo & Header Text (Centered vertically & aligned) -->
+    <g transform="translate(630, 154)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.5" filter="url(#card-shadow)"/>
+      <!-- Perfect mathematical center (cx=32, cy=32) -->
+      <g transform="translate(8, 8)">
+        <!-- Center Gem -->
+        <polygon points="24,21.5 26.5,24 24,26.5 21.5,24" fill="#0284C7"/>
+        <!-- North Arm -->
+        <line x1="24" y1="21" x2="24" y2="10" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M20 15 L24 11 L28 15" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- South Arm -->
+        <line x1="24" y1="27" x2="24" y2="38" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M20 33 L24 37 L28 33" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- North-East Arm (60 deg) -->
+        <line x1="26" y1="22.5" x2="35" y2="17" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M30 15 L34.5 17.5 L32 22" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- South-West Arm -->
+        <line x1="22" y1="25.5" x2="13" y2="31" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M18 33 L13.5 30.5 L16 26" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- North-West Arm -->
+        <line x1="22" y1="22.5" x2="13" y2="17" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M16 22 L13.5 17.5 L18 15" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- South-East Arm -->
+        <line x1="26" y1="25.5" x2="35" y2="31" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M32 26 L34.5 30.5 L30 33" fill="none" stroke="#0284C7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+    <!-- Brand Title in Brand Color -->
+    <text x="712" y="175" font-family="Segoe UI, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#0284C7" letter-spacing="-0.3">Snowflake</text>
+    <rect x="712" y="187" width="198" height="30" rx="15" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="1.2"/>
+    <text x="811" y="206" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#0284C7">THE SQL-FIRST WAREHOUSE</text>
+
+    <!-- Tier 1: Engine -->
+    <g transform="translate(626, 248)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F0F9FF" stroke="#E0F2FE" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#0284C7"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">1</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0369A1">Compute: Virtual Warehouses</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Multi-cluster shared data (MCSD) architecture</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Zero cluster config: T-shirt sizing (XS to 6XL)</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Sub-second auto-resume &amp; auto-suspend by query</text>
+    </g>
+
+    <!-- Tier 2: Storage -->
+    <g transform="translate(626, 370)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">2</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">Storage: Micro-Partitions + Iceberg</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Proprietary columnar micro-partitions (50–500MB)</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Automatic clustering &amp; min/max pruning (zero index ops)</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Apache Iceberg tables backed by customer external storage</text>
+    </g>
+
+    <!-- Tier 3: Governance -->
+    <g transform="translate(626, 492)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">3</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">Governance: Snowflake Horizon</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Zero-copy cloning for instant dev/QA testing</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Secure Data Sharing across clouds with zero ETL copying</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Dynamic data masking, tag policies &amp; row-level security</text>
+    </g>
+
+    <!-- Tier 4: Developer & AI -->
+    <g transform="translate(626, 614)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">4</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">AI &amp; Apps: Snowpark &amp; Cortex</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Cortex LLMs callable directly inside SQL statements</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Snowpark pushes Python DataFrames into warehouse nodes</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Native App Framework + embedded Streamlit UIs</text>
+    </g>
+
+    <!-- Verdict Box with Safe Multi-line Wrapping -->
+    <g transform="translate(626, 736)">
+      <rect x="0" y="0" width="468" height="138" rx="12" fill="#F0F9FF" stroke="#0284C7" stroke-width="1.5"/>
+      <text x="16" y="26" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#0284C7">ARCHITECTURAL SWEET SPOT &amp; TRADEOFF</text>
+      <text x="16" y="49" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1E293B">Best when: You want pure SQL &amp; zero infra ops.</text>
+      <text x="16" y="70" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">The gold standard for analytical SQL, fast dbt execution,</text>
+      <text x="16" y="87" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">unlimited read concurrency, and data monetization.</text>
+      <text x="16" y="112" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#0369A1">Trade-off: Fast credit consumption if warehouse auto-suspend lags.</text>
+    </g>
+  </g>
+  <!-- ================= COLUMN 3: MICROSOFT FABRIC ================= -->
+  <g id="col-fabric">
+    <rect x="1150" y="138" width="500" height="750" rx="16" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5" filter="url(#card-shadow)"/>
+
+    <!-- Header Strip -->
+    <rect x="1150" y="138" width="500" height="96" rx="16" fill="#F0FDF9"/>
+    <rect x="1150" y="220" width="500" height="14" fill="#F0FDF9"/>
+    <line x1="1150" y1="234" x2="1650" y2="234" stroke="#A7F3D0" stroke-width="1.8"/>
+
+    <!-- Fabric Logo & Header Text (Centered vertically & aligned) -->
+    <g transform="translate(1170, 154)">
+      <rect x="0" y="0" width="64" height="64" rx="14" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.5" filter="url(#card-shadow)"/>
+      <g transform="translate(13, 12) scale(0.96)">
+        <path fill="url(#fab-g-a)" fill-rule="evenodd" d="m5.64 31.6-.586 2.144c-.218.685-.524 1.693-.689 2.59a5.63 5.63 0 0 0 4.638 7.588c.792.114 1.688.108 2.692-.04l4.613-.636a2.92 2.92 0 0 0 2.421-2.127l3.175-11.662L5.64 31.599Z"/>
+        <path fill="url(#fab-g-b)" d="M10.14 32.152c-4.863.753-5.861 4.423-5.861 4.423l4.656-17.11 24.333-3.292-3.318 12.052a1.71 1.71 0 0 1-1.388 1.244l-.136.022-18.423 2.684z"/>
+        <path fill="url(#fab-g-c)" d="m12.899 21.235 26.938-3.98a1.6 1.6 0 0 0 1.323-1.17l2.78-10.06a1.595 1.595 0 0 0-1.74-2.012L16.498 7.81a7.19 7.19 0 0 0-5.777 5.193L7.013 26.438c.744-2.717 1.202-4.355 5.886-5.203"/>
+      </g>
+    </g>
+    <!-- Brand Title in Brand Color -->
+    <text x="1252" y="175" font-family="Segoe UI, -apple-system, sans-serif" font-size="26" font-weight="900" fill="#008272" letter-spacing="-0.3">Microsoft Fabric</text>
+    <rect x="1252" y="187" width="204" height="30" rx="15" fill="#D1FAE5" stroke="#A7F3D0" stroke-width="1.2"/>
+    <text x="1354" y="206" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="800" fill="#008272">THE ALL-IN-ONE ECOSYSTEM</text>
+
+    <!-- Tier 1: Engine -->
+    <g transform="translate(1166, 248)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F0FDF9" stroke="#D1FAE5" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#008272"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">1</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#065F46">Compute: Shared Multi-Engine</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• F-SKU capacity pool shared across all engines</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Apache Spark, T-SQL Warehouse, KQL &amp; Data Factory</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• 24-hour background smoothing absorbs bursty workloads</text>
+    </g>
+
+    <!-- Tier 2: Storage -->
+    <g transform="translate(1166, 370)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">2</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">Storage: OneLake (SaaS Delta)</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Single logical SaaS data lake built on Delta Parquet</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• OneLake Shortcuts virtualize ADLS, S3, &amp; Snowflake</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Direct Lake mode: Power BI queries Delta with zero refresh</text>
+    </g>
+
+    <!-- Tier 3: Governance -->
+    <g transform="translate(1166, 492)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">3</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">Governance: OneLake &amp; Purview</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Domain &amp; Workspace Data Mesh boundary isolation</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• OneLake Security: Unified RBAC across all query engines</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Native automated Microsoft Purview catalog &amp; lineage</text>
+    </g>
+
+    <!-- Tier 4: Developer & AI -->
+    <g transform="translate(1166, 614)">
+      <rect x="0" y="0" width="468" height="110" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1.2"/>
+      <rect x="12" y="12" width="22" height="22" rx="6" fill="#64748B"/>
+      <text x="23" y="27" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF">4</text>
+      <text x="42" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0F172A">AI &amp; BI Integration: Copilot</text>
+      <text x="14" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">• Built-in Copilot across Notebooks, SQL, and Power BI</text>
+      <text x="14" y="73" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Native Git Integration (ADO &amp; GitHub) with PBIR / NB sync</text>
+      <text x="14" y="94" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="500" fill="#475569">• Unrivaled seamless delivery to Microsoft 365 &amp; Teams</text>
+    </g>
+
+    <!-- Verdict Box with Safe Multi-line Wrapping -->
+    <g transform="translate(1166, 736)">
+      <rect x="0" y="0" width="468" height="138" rx="12" fill="#F0FDF9" stroke="#008272" stroke-width="1.5"/>
+      <text x="16" y="26" font-family="Segoe UI, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#008272">ARCHITECTURAL SWEET SPOT &amp; TRADEOFF</text>
+      <text x="16" y="49" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#1E293B">Best when: Your enterprise runs on Power BI &amp; Azure.</text>
+      <text x="16" y="70" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">The all-in-one SaaS platform: pipelines, Spark, warehouse,</text>
+      <text x="16" y="87" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#475569">and Power BI under one tenant with Direct Lake speed.</text>
+      <text x="16" y="112" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#065F46">Trade-off: Fixed capacity sizing &amp; ecosystem still maturing.</text>
+    </g>
+  </g>
+  <!-- ================= BOTTOM STRATEGIC SYNTHESIS ================= -->
+  <g id="bottom-bar" transform="translate(70, 915)">
+    <rect x="0" y="0" width="1580" height="175" rx="16" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.8" filter="url(#card-shadow)"/>
+
+    <!-- Left Badge Icon -->
+    <g transform="translate(24, 25)">
+      <rect x="0" y="0" width="85" height="125" rx="12" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1.2"/>
+      <circle cx="42" cy="44" r="22" fill="#D97706"/>
+      <text x="42" y="52" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="22" fill="#FFFFFF">💡</text>
+      <text x="42" y="92" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#B45309">THE KEY</text>
+      <text x="42" y="108" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#B45309">TAKEAWAY</text>
+    </g>
+
+    <!-- Top Headline -->
+    <text x="135" y="44" font-family="Segoe UI, -apple-system, sans-serif" font-size="18.5" font-weight="800" fill="#0F172A">
+      The Real Architectural Trade-Off: <tspan fill="#D97706">Engine Control vs. Concurrency Simplicity vs. All-in-One SaaS</tspan>
+    </text>
+
+    <!-- 3 Spacious Takeaway Cards (Height 90px, 2 clean vertical lines per card) -->
+    <g transform="translate(135, 62)">
+      <!-- Card 1: Databricks -->
+      <g id="takeaway-databricks">
+        <rect x="0" y="0" width="460" height="92" rx="10" fill="#FFFFFF" stroke="#FFD5CC" stroke-width="1.2"/>
+        <circle cx="20" cy="24" r="5" fill="#FF3621"/>
+        <text x="32" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#FF3621">Databricks</text>
+        <text x="16" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">Maximum compute control &amp; deep open-source tuning.</text>
+        <text x="16" y="72" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748B">Ideal for large engineering teams writing PySpark &amp; training ML models.</text>
+      </g>
+
+      <!-- Card 2: Snowflake -->
+      <g id="takeaway-snowflake" transform="translate(480, 0)">
+        <rect x="0" y="0" width="460" height="92" rx="10" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.2"/>
+        <circle cx="20" cy="24" r="5" fill="#0284C7"/>
+        <text x="32" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#0284C7">Snowflake</text>
+        <text x="16" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">Zero infra operations &amp; unmatched SQL concurrency.</text>
+        <text x="16" y="72" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748B">Ideal for analytics warehouses, fast dbt models, and cross-cloud sharing.</text>
+      </g>
+
+      <!-- Card 3: Fabric -->
+      <g id="takeaway-fabric" transform="translate(960, 0)">
+        <rect x="0" y="0" width="460" height="92" rx="10" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.2"/>
+        <circle cx="20" cy="24" r="5" fill="#008272"/>
+        <text x="32" y="28" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="800" fill="#008272">Microsoft Fabric</text>
+        <text x="16" y="52" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#1E293B">Unified SaaS ecosystem with zero-copy OneLake shortcuts.</text>
+        <text x="16" y="72" font-family="Segoe UI, -apple-system, sans-serif" font-size="11" font-weight="500" fill="#64748B">Ideal for enterprises building reports in Power BI and living inside Azure.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= AUTHOR ATTRIBUTION FOOTER ================= -->
+  <g id="footer-branding" transform="translate(70, 1120)">
+    <line x1="0" y1="0" x2="1580" y2="0" stroke="#CBD5E1" stroke-width="1"/>
+    <text x="0" y="26" font-family="Segoe UI, -apple-system, sans-serif" font-size="13.5" font-weight="600" fill="#64748B">
+      Modern Data Platforms Architecture Series
+    </text>
+    <g transform="translate(1330, 8)">
+      <rect x="0" y="0" width="250" height="32" rx="16" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/>
+      <rect x="6" y="6" width="20" height="20" rx="4" fill="#0A66C2"/>
+      <text x="16" y="20" text-anchor="middle" font-family="Segoe UI, -apple-system, sans-serif" font-size="12" font-weight="800" fill="#FFFFFF">in</text>
+      <text x="34" y="21" font-family="Segoe UI, -apple-system, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A">Santosh Pothnak</text>
+      <text x="144" y="21" font-family="Segoe UI, -apple-system, sans-serif" font-size="11.5" font-weight="600" fill="#0A66C2">@santoshpothnak</text>
+    </g>
+  </g>
+</svg>
